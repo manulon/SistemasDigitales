@@ -1,2 +1,2 @@
-# SistemasDigitales
-Repositorio que contiene los trabajos practicos de la materia Introduccion a los Sistemas Distribuidos [66.17]
+# Sistemas Digitales
+Repositorio que contiene los trabajos practicos de la materia Sistemas Digitales [66.17]
