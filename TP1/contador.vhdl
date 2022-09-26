@@ -38,20 +38,20 @@ begin
     cuenta_1 <= std_logic_vector(aux_cuenta_1);
 
     process(clk, rst) is
-        begin
-            if rst = '1' then
-                aux_cuenta_30 <= (others => '0')
-            elsif clk = '1' and clk'event then
-                if 1s = '1' then
-                    if aux_cuenta_30 = 29 then
-                        aux_cuenta_30 <= (others => '0')
-                        30s <= '1';
-                    else
-                        aux_cuenta_30 <= cuenta30 + 1
-                    end if;
+    begin
+        if rst = '1' then
+            aux_cuenta_30 <= (others => '0')
+        elsif clk = '1' and clk'event then
+            if 1s = '1' then
+                if aux_cuenta_30 = 29 then
+                    aux_cuenta_30 <= (others => '0')
+                    30s <= '1';
+                else
+                    aux_cuenta_30 <= cuenta30 + 1
                 end if;
             end if;
-        end process;
+        end if;
+    end process;
 
         cuenta_30 <= std_logic_vector(aux_cuenta_30);
 
