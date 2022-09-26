@@ -5,8 +5,8 @@ entity fsm is
     port(
         rst : in std_logic;
         clk : in std_logic;
-        1s : in std_logic;
-        30s : in std_logic;
+        un_segundo : in std_logic;
+        treinta_segundos : in std_logic;
         r1: out std_logic;
         r2: out std_logic;
         v1: out std_logic;        
@@ -29,31 +29,31 @@ begin
         elsif clk = '1' and clk'event then
             case state is
                 when S0 =>
-                    if 30s = '1' then
+                    if treinta_segundos = '1' then
                         state <= S1;
                     end if;
                 when S1 =>
-                    if 1s = '1' then
+                    if un_segundo = '1' then
                         state <= S2;
                     end if;
                 when S2 =>
-                    if 1s = '1' then
+                    if un_segundo = '1' then
                         state <= S3;
                     end if;
                 when S3 =>
-                    if 30s = '1' then
+                    if treinta_segundos = '1' then
                         state <= S4;
                     end if;
                 when S4 =>
-                    if 1s = '1' then
+                    if un_segundo = '1' then
                         state <= S5;                   
                     end if;
                 when S5 =>
-                    if 1s = '1' then
+                    if un_segundo = '1' then
                         state <= S6;
                     end if;
                 when S6 =>
-                    if 30s = '1' then
+                    if treinta_segundos = '1' then
                         state <= S0;
                     end if;
             end case;

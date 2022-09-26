@@ -1,8 +1,0 @@
-set component=mux
-set test_bench=tb_%component%
-
-ghdl -a %component%.vhdl %test_bench%.vhdl
-ghdl -s %component%.vhdl %test_bench%.vhdl
-ghdl -e %test_bench%
-ghdl -r %test_bench% --vcd=%test_bench%.vcd --stop-time=1000ns
-gtkwave %test_bench%.vcd

@@ -1,0 +1,7 @@
+v 4
+file . "tb_contador.vhdl" "ae18acd78095794b52dd0f18e5b334426688e59f" "20220926183952.499":
+  entity tb_contador at 1( 0) + 0 on 21;
+  architecture behavioral of tb_contador at 7( 84) + 0 on 22;
+file . "contador.vhdl" "7413dcb673f47dbf7276f1ca5c6350d6df2640c2" "20220926183952.498":
+  entity contador at 1( 0) + 0 on 19;
+  architecture behavioral of contador at 20( 445) + 0 on 20;
