@@ -31,7 +31,7 @@ begin
                 if aux_tres_segundos = '1' then
                     aux_tres_segundos <= '0';
                 end if;
-                if aux_cuenta_3 = 40 then
+                if aux_cuenta_3 = 20 then
                     aux_cuenta_3 <= (others => '0');
                     aux_tres_segundos <= '1';
                 else

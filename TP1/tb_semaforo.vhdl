@@ -5,7 +5,7 @@ entity tb_semaforo is
 end tb_semaforo;
 
 architecture behavioral of tb_semaforo is
-    constant SIM_TIME_NS: time := 500 ns;
+    constant SIM_TIME_NS: time := 200 ns;
     constant TB_N3 : natural := 28;
     constant TB_N30: natural := 4;
 
@@ -26,8 +26,8 @@ architecture behavioral of tb_semaforo is
     signal tb_a2                :  std_logic := '0';
 
     begin
-        tb_rst <= '0', '1' after 30 ns, '0' after 50 ns;
-        tb_clk <= not tb_clk after 0.15 ns;
+        tb_rst <= '1', '0' after 1 ns;
+        tb_clk <= not tb_clk after 0.10 ns;
 
         stop_simulation: process
     begin
