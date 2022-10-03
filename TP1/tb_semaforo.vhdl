@@ -5,7 +5,7 @@ entity tb_semaforo is
 end tb_semaforo;
 
 architecture behavioral of tb_semaforo is
-    constant SIM_TIME_NS: time := 200 ns;
+    constant SIM_TIME_NS: time := 1000 ns;
     constant TB_N3 : natural := 28;
     constant TB_N30: natural := 4;
 
