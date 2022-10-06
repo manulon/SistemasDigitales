@@ -11,13 +11,11 @@ entity contador is
         rst : in std_logic;
         clk : in std_logic;
         tres_segundos  : out std_logic;
-        treinta_segundos : out std_logic;
-        cuenta_3 : out std_logic_vector(N3-1 downto 0);
-        cuenta_30 : out std_logic_vector(N30-1 downto 0)
+        treinta_segundos : out std_logic
     );
 end contador;
 
-architecture behavioral of contador is
+architecture contador_arq of contador is
     signal aux_cuenta_3  : unsigned(N3-1 downto 0);
     signal aux_cuenta_30 : unsigned(N30-1 downto 0);
     signal aux_tres_segundos:  std_logic := '0';
@@ -59,9 +57,7 @@ begin
                 end if;
             end process;
 
-        cuenta_3         <= std_logic_vector(aux_cuenta_3);
-        cuenta_30        <= std_logic_vector(aux_cuenta_30);
         tres_segundos    <= aux_tres_segundos;
         treinta_segundos <= aux_treinta_segundos;
 
-end behavioral;
+end contador_arq;
