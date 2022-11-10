@@ -9,19 +9,27 @@ architecture tb_multiplicador_arq of tb_multiplicador is
     component multiplicador is
 		port (
 			clk : in std_logic;
-            test_a: out std_logic_vector(23-1 downto 0);
-            test_b: out std_logic_vector(23-1 downto 0);
-            resultado_vector: out std_logic_vector(23-1 downto 0)
+            test_a: out std_logic_vector(19-1 downto 0);
+            test_b: out std_logic_vector(19-1 downto 0);
+            resultado: out std_logic_vector(19-1 downto 0);
+            exponente_final: out std_logic_vector(6-1 downto 0);
+            mantisa_final:   out std_logic_vector(12-1 downto 0);
+            test_exponente_a:     out std_logic_vector(6-1 downto 0);
+            test_exponente_b:     out std_logic_vector(6-1 downto 0)
 		);
 	end component;
     
         -- resultado  : out unsigned(N-1 downto 0)
 
         signal tb_clk: std_logic := '0';
-        signal tb_test_a: std_logic_vector(23-1 downto 0);
-        signal tb_test_b: std_logic_vector(23-1 downto 0);
-        signal tb_resultado_vector: std_logic_vector(23-1 downto 0);
-  
+        signal tb_test_a: std_logic_vector(19-1 downto 0);
+        signal tb_test_b: std_logic_vector(19-1 downto 0);
+        signal tb_resultado: std_logic_vector(19-1 downto 0);
+        signal tb_exponente_final: std_logic_vector(6-1 downto 0);
+        signal tb_mantisa_final:   std_logic_vector(12-1 downto 0);
+        signal tb_test_exponente_a:        std_logic_vector(6-1 downto 0);
+        signal tb_test_exponente_b:        std_logic_vector(6-1 downto 0);
+
     begin
         tb_clk <= not tb_clk after 0.10 ns;
 
@@ -30,7 +38,11 @@ architecture tb_multiplicador_arq of tb_multiplicador is
             clk              => tb_clk,
             test_a           => tb_test_a,
             test_b           => tb_test_b,
-            resultado_vector => tb_resultado_vector
+            resultado        => tb_resultado,
+            exponente_final  => tb_exponente_final,
+            test_exponente_a => tb_test_exponente_a,
+            test_exponente_b => tb_test_exponente_b,                    
+            mantisa_final    => tb_mantisa_final            
     );
 
     
